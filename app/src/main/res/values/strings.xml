@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChipView</string>
+    <string name="hint_chip">Enter something to create chip</string>
+    <string name="get_chips">Get Chips</string>
+    <string name="simple_chip">Simple Chips</string>
+    <string name="custom_chip_background">Chips with custom backgrounds</string>
+    <string name="custom_chip_layout">Chips with custom layouts</string>
+</resources>
