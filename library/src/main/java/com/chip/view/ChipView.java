@@ -105,7 +105,8 @@ public class ChipView extends EditText {
     }
 
     private int buildChip(String chip, SpannableStringBuilder builder, int index, int pos) {
-        View view = chipBuilder.getChip(inflater, pos, chip);
+        chipBuilder.setPosition(pos);
+        View view = chipBuilder.getChip(inflater, chip);
         int spec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED);
         view.measure(spec, spec);
         view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());

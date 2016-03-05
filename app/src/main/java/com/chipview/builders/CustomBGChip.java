@@ -10,7 +10,7 @@ import com.chipview.R;
 /**
  * Created by Abhishek on 3/5/2016.
  */
-public class CustomBGChip implements ChipBuilder {
+public class CustomBGChip extends ChipBuilder {
     private int[] resIds = {R.drawable.chip_bg_red, R.drawable.chip_bg_green, R.drawable.chip_bg_blue};
 
     @Override
@@ -19,11 +19,11 @@ public class CustomBGChip implements ChipBuilder {
     }
 
     @Override
-    public View getChip(LayoutInflater inflater, int position, String data) {
+    public View getChip(LayoutInflater inflater, String data) {
         View view = inflater.inflate(R.layout.view_chip_simple, null);
         TextView txtChip = (TextView) view.findViewById(R.id.txt_chip);
         txtChip.setText(data);
-        txtChip.setBackgroundResource(resIds[position]);
+        txtChip.setBackgroundResource(resIds[getPosition()]);
         return view;
     }
 }
